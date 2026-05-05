@@ -12,27 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        window.tailwind = {
-            config: {
-                theme: {
-                    extend: {
-                        colors: {
-                            primary: '#007BFF',
-                            primaryDark: '#0056b3',
-                        },
-                        fontFamily: {
-                            sans: ['Pretendard', 'sans-serif'],
-                        }
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007BFF',
+                        primaryDark: '#0056b3',
+                    },
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
                     }
                 }
             }
-        };
+        }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        /* 추가적인 커스텀 스타일 및 부드러운 스크롤 */
         html { scroll-behavior: smooth; }
         
         .hero-overlay {
@@ -49,7 +46,6 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        /* 갤러리 이미지 호버 효과 */
         .gallery-item img {
             transition: transform 0.5s ease;
         }
@@ -64,20 +60,18 @@
     <header id="header" class="glass-header fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- 로고 -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="text-2xl font-bold text-primary tracking-tight">
                         <i class="fa-solid fa-glasses mr-2"></i>성민안경
                     </a>
                 </div>
-                <!-- 데스크탑 메뉴 -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#about" class="text-gray-600 hover:text-primary font-medium transition">About</a>
                     <a href="#products" class="text-gray-600 hover:text-primary font-medium transition">Products</a>
                     <a href="#services" class="text-gray-600 hover:text-primary font-medium transition">Services</a>
+                    <a href="#video" class="text-gray-600 hover:text-primary font-medium transition">Maintenance</a>
                     <a href="#booking" class="text-gray-600 hover:text-primary font-medium transition">Location</a>
                 </nav>
-                <!-- 모바일 메뉴 버튼 (기능은 데모상 시각적으로만 구현) -->
                 <div class="md:hidden flex items-center">
                     <button class="text-gray-600 hover:text-primary focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -90,14 +84,14 @@
     <main>
         <!-- 2. Hero Section -->
         <section id="hero" class="relative h-screen flex items-center justify-center bg-cover bg-center" 
-                 style="background-image: url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                 style="background-image: url('https://media.istockphoto.com/id/2232482080/ko/%EC%82%AC%EC%A7%84/%ED%83%9C%EB%B8%94%EB%A6%BF%EC%9D%84-%EB%93%A4%EA%B3%A0-%EB%AF%B8%EC%86%8C%EB%A5%BC-%EC%A7%93%EA%B3%A0-%EC%82%AC%EB%AC%B4%EC%8B%A4-%EA%B1%B4%EB%AC%BC-%EA%B7%BC%EC%B2%98%EB%A5%BC-%EA%B1%B7%EB%8A%94-%EC%A0%8A%EC%9D%80-%EC%95%84%EC%8B%9C%EC%95%84-%EC%82%AC%EC%97%85%EA%B0%80.webp?a=1&b=1&s=612x612&w=0&k=20&c=J8Uzwl1V8YKw6QgTfQoCJs7nvXl5rEjOlmbwPriAVZU=');">
             <div class="absolute inset-0 hero-overlay"></div>
             <div class="relative z-10 text-center px-4">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                     당신의 선명한 일상을<br>디자인합니다. <span class="text-primary">성민안경</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-200 mb-10 font-light">
-                    전문가의 세심한 손길로 완성되는 편안한 시야
+                    안전하고 편안한 신세계를 열어드립니다.
                 </p>
                 <a href="#booking" class="inline-block bg-primary hover:bg-primaryDark text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     방문 예약하기
@@ -115,7 +109,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="rounded-2xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1589828135865-c3c7e85292eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="최신 검안 장비" class="w-full h-auto object-cover">
+                        <img src="https://plus.unsplash.com/premium_photo-1683543124406-ff29013727f2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8JUVDJTk1JTg4JUVBJUIyJUJEfGVufDB8fDB8fHww" alt="최신 검안 장비" class="w-full h-auto object-cover">
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">전문성과 정직함을 최우선으로 합니다.</h3>
@@ -156,95 +150,68 @@
                     <p class="mt-4 text-gray-600">당신의 스타일을 완성할 트렌디한 컬렉션</p>
                 </div>
 
-                <!-- 탭 메뉴 -->
                 <div class="flex justify-center mb-12 space-x-4">
                     <button id="btn-frames" onclick="openTab('frames')" class="tab-btn active bg-primary text-white px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none shadow-md">트렌디한 안경테</button>
                     <button id="btn-sunglasses" onclick="openTab('sunglasses')" class="tab-btn bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition duration-300 border border-gray-200 focus:outline-none">선글라스</button>
                     <button id="btn-lenses" onclick="openTab('lenses')" class="tab-btn bg-white text-gray-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition duration-300 border border-gray-200 focus:outline-none">기능성 렌즈</button>
                 </div>
 
-                <!-- 갤러리 영역 -->
                 <div class="gallery-container relative min-h-[400px]">
-                    <!-- 안경테 탭 -->
                     <div id="frames" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <div class="h-64 overflow-hidden relative bg-gray-100">
                                 <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="안경테 1" class="w-full h-full object-cover">
                             </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">클래식 메탈 프레임</h4>
-                                <p class="text-primary mt-2 font-medium">가벼운 착용감</p>
+                            <div class="p-6 text-center flex flex-col h-full">
+                                <h4 class="font-semibold text-lg text-gray-900">클래식 티타늄 프레임</h4>
+                                <p class="text-primary mt-2 font-medium text-sm mb-3">#초경량 #무알러지</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">항공기 소재인 초경량 티타늄을 사용하여 하루 종일 착용해도 피로감이 없는 프리미엄 라인입니다.</p>
                             </div>
                         </div>
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <div class="h-64 overflow-hidden relative bg-gray-100">
                                 <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80" alt="안경테 2" class="w-full h-full object-cover">
                             </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">모던 뿔테</h4>
-                                <p class="text-primary mt-2 font-medium">트렌디한 실루엣</p>
+                            <div class="p-6 text-center flex flex-col h-full">
+                                <h4 class="font-semibold text-lg text-gray-900">모던 아세테이트 뿔테</h4>
+                                <p class="text-primary mt-2 font-medium text-sm mb-3">#트렌디 #볼드함</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">고급 아세테이트 소재가 주는 깊은 색감과 세련된 실루엣이 특징입니다.</p>
                             </div>
                         </div>
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <div class="h-64 overflow-hidden relative bg-gray-100">
                                 <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80" alt="안경테 3" class="w-full h-full object-cover">
                             </div>
-                            <div class="p-6 text-center">
+                            <div class="p-6 text-center flex flex-col h-full">
                                 <h4 class="font-semibold text-lg text-gray-900">하프 림 스퀘어</h4>
-                                <p class="text-primary mt-2 font-medium">지적인 이미지</p>
+                                <p class="text-primary mt-2 font-medium text-sm mb-3">#지적인무드 #넓은시야</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">깔끔한 인상을 연출하며 비즈니스 미팅 등 전문적인 이미지가 필요한 분들께 추천합니다.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 선글라스 탭 -->
-                    <div id="sunglasses" class="tab-content hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                    <div id="sunglasses" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                            <div class="h-64 overflow-hidden relative bg-gray-100">
                                 <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80" alt="선글라스 1" class="w-full h-full object-cover filter brightness-75 sepia-[.2]">
                             </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">UV 완벽 차단 라인</h4>
-                                <p class="text-primary mt-2 font-medium">여름 필수 아이템</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80" alt="선글라스 2" class="w-full h-full object-cover filter hue-rotate-15">
-                            </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">오버사이즈 핏</h4>
-                                <p class="text-primary mt-2 font-medium">얼굴이 작아보이는 효과</p>
+                            <div class="p-6 text-center flex flex-col h-full">
+                                <h4 class="font-semibold text-lg text-gray-900">UV 퍼펙트 블록 편광</h4>
+                                <p class="text-primary mt-2 font-medium text-sm mb-3">#눈부심방지 #안구보호</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">강렬한 햇빛 아래나 운전 중에도 빛 번짐 없는 맑은 시야를 제공합니다.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 기능성 렌즈 탭 -->
-                    <div id="lenses" class="tab-content hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
+                    <div id="lenses" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                             <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center p-8">
                                 <i class="fa-solid fa-laptop-code text-6xl text-primary opacity-80"></i>
                             </div>
-                            <div class="p-6 text-center">
+                            <div class="p-6 text-center flex flex-col h-full">
                                 <h4 class="font-semibold text-lg text-gray-900">블루라이트 차단 렌즈</h4>
-                                <p class="text-gray-600 mt-2 text-sm">디지털 기기 사용이 많은 분들을 위한 눈 피로 완화</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center p-8">
-                                <i class="fa-solid fa-sun text-6xl text-primary opacity-80"></i>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">변색 렌즈</h4>
-                                <p class="text-gray-600 mt-2 text-sm">자외선 양에 따라 색이 변하여 실내외 겸용으로 완벽</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
-                            <div class="h-64 overflow-hidden relative bg-gray-100 flex items-center justify-center p-8">
-                                <i class="fa-solid fa-eye text-6xl text-primary opacity-80"></i>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h4 class="font-semibold text-lg text-gray-900">다초점 렌즈</h4>
-                                <p class="text-gray-600 mt-2 text-sm">가까운 곳부터 먼 곳까지 어지러움 없이 선명하게</p>
+                                <p class="text-primary mt-2 font-medium text-sm mb-3">#직장인필수 #수면질개선</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">스마트 기기에서 발생하는 유해한 청색광을 선택적으로 차단합니다.</p>
                             </div>
                         </div>
                     </div>
@@ -261,60 +228,50 @@
                     <p class="mt-4 text-gray-600">고객 한 분 한 분을 위한 맞춤형 솔루션</p>
                 </div>
 
-                <!-- 검안 프로세스 (Step-by-step) -->
                 <div class="mb-20">
                     <h3 class="text-2xl font-bold text-center mb-12">체계적인 검안 프로세스</h3>
                     <div class="relative">
-                        <!-- 연결선 -->
                         <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200" style="z-index: 1;"></div>
-                        
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative" style="z-index: 2;">
-                            <!-- Step 1 -->
                             <div class="text-center">
                                 <div class="w-24 h-24 mx-auto bg-white border-4 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg transition transform hover:-translate-y-2">
                                     <i class="fa-solid fa-eye-dropper text-3xl text-primary"></i>
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">1. 시력 검사</h4>
-                                <p class="text-sm text-gray-600">최신 장비로 정밀한<br>굴절 이상도 측정</p>
+                                <p class="text-sm text-gray-600">정밀한 굴절 이상도 측정</p>
                             </div>
-                            <!-- Step 2 -->
-                            <div class="text-center mt-8 md:mt-0">
+                            <div class="text-center">
                                 <div class="w-24 h-24 mx-auto bg-white border-4 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg transition transform hover:-translate-y-2">
                                     <i class="fa-solid fa-comments text-3xl text-primary"></i>
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">2. 라이프스타일 상담</h4>
-                                <p class="text-sm text-gray-600">작업 환경과 습관에<br>맞춘 1:1 심층 상담</p>
+                                <p class="text-sm text-gray-600">1:1 심층 맞춤 상담</p>
                             </div>
-                            <!-- Step 3 -->
-                            <div class="text-center mt-8 md:mt-0">
+                            <div class="text-center">
                                 <div class="w-24 h-24 mx-auto bg-white border-4 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg transition transform hover:-translate-y-2">
                                     <i class="fa-solid fa-thumbs-up text-3xl text-primary"></i>
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">3. 맞춤 렌즈 추천</h4>
-                                <p class="text-sm text-gray-600">상담 결과를 바탕으로<br>최적의 렌즈 설계</p>
+                                <p class="text-sm text-gray-600">최적의 렌즈 설계</p>
                             </div>
-                            <!-- Step 4 -->
-                            <div class="text-center mt-8 md:mt-0">
+                            <div class="text-center">
                                 <div class="w-24 h-24 mx-auto bg-primary border-4 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg transition transform hover:-translate-y-2">
                                     <i class="fa-solid fa-ruler-combined text-3xl text-white"></i>
                                 </div>
                                 <h4 class="font-bold text-lg mb-2 text-primary">4. 정밀 피팅</h4>
-                                <p class="text-sm text-gray-600">얼굴형에 완벽하게<br>맞는 인체공학적 피팅</p>
+                                <p class="text-sm text-gray-600">인체공학적 맞춤 피팅</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 개인별 피팅 서비스 강조 -->
                 <div class="bg-blue-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between shadow-sm border border-blue-100">
                     <div class="md:w-2/3 mb-8 md:mb-0 md:pr-12">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">개인별 피팅 서비스의 차이</h3>
                         <p class="text-gray-700 leading-relaxed mb-4">
                             안경이 흘러내리거나 귀가 아프신가요? 성민안경은 고객님의 <strong>얼굴형, 귀 높이, 코 모양</strong>까지 미세한 특징을 모두 고려하여 세밀한 피팅을 진행합니다.
                         </p>
-                        <p class="text-primary font-semibold">
-                            ✓ 단 1mm의 오차도 허용하지 않는 차별화된 만족감을 약속합니다.
-                        </p>
+                        <p class="text-primary font-semibold">✓ 단 1mm의 오차도 허용하지 않는 차별화된 만족감을 약속합니다.</p>
                     </div>
                     <div class="md:w-1/3 flex justify-center">
                         <i class="fa-solid fa-user-check text-8xl text-primary opacity-80"></i>
@@ -323,18 +280,40 @@
             </div>
         </section>
 
+        <!-- 5.5 Video Section (안경관리) -->
+        <section id="video" class="py-24 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">안경관리</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto rounded"></div>
+                    <p class="mt-4 text-gray-600">성민안경이 알려드리는 올바른 안경 관리 가이드</p>
+                </div>
+                
+                <!-- 비디오 컨테이너: aspect-video 클래스로 고정 비율 확보 -->
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-black aspect-video relative">
+                    <iframe src="https://player.vimeo.com/video/1189284481?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            class="absolute top-0 left-0 w-full h-full"
+                            title="안경관리 가이드 영상"></iframe>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-500 italic text-sm text-center">* 위 영상은 성민안경의 전문 지식을 바탕으로 제작된 관리 가이드입니다.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- 6. Booking & Location -->
         <section id="booking" class="py-24 bg-gray-900 text-white relative">
-            <!-- 배경 패턴 (옵션) -->
             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#007BFF 1px, transparent 1px); background-size: 20px 20px;"></div>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    
-                    <!-- 예약 폼 -->
                     <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-gray-800">
-                        <h3 class="text-3xl font-bold mb-2">방문 예약하기</h3>
-                        <p class="text-gray-500 mb-8">대기 시간 없는 편안한 검안을 위해 예약해주세요.</p>
+                        <h3 class="text-3xl font-bold mb-2 text-left">방문 예약하기</h3>
+                        <p class="text-gray-500 mb-8 text-left text-sm">대기 시간 없는 편안한 검안을 위해 예약해주세요.</p>
                         
                         <form id="bookingForm" onsubmit="handleBooking(event)">
                             <div class="mb-5">
@@ -355,36 +334,34 @@
                         </form>
                     </div>
 
-                    <!-- 위치 및 매장 정보 -->
                     <div class="flex flex-col justify-between">
                         <div>
-                            <h2 class="text-3xl font-bold mb-6">오시는 길</h2>
+                            <h2 class="text-3xl font-bold mb-6 text-left">오시는 길</h2>
                             <div class="space-y-6 mb-10">
                                 <div class="flex items-start">
                                     <i class="fa-solid fa-location-dot mt-1 text-primary text-xl w-8"></i>
-                                    <div>
+                                    <div class="text-left">
                                         <h4 class="font-semibold text-lg text-gray-200">주소</h4>
                                         <p class="text-gray-400">서울시 구로구 디지털로 243</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fa-solid fa-phone mt-1 text-primary text-xl w-8"></i>
-                                    <div>
+                                    <div class="text-left">
                                         <h4 class="font-semibold text-lg text-gray-200">매장 연락처</h4>
                                         <p class="text-gray-400">02-362-4680</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i class="fa-solid fa-clock mt-1 text-primary text-xl w-8"></i>
-                                    <div>
+                                    <div class="text-left">
                                         <h4 class="font-semibold text-lg text-gray-200">운영 시간</h4>
-                                        <p class="text-gray-400">평일 오전 9:00 ~ 오후 7:00<br>(주말 및 공휴일 휴무)</p>
+                                        <p class="text-gray-400 text-sm">평일 오전 9:00 ~ 오후 7:00<br>(주말 및 공휴일 휴무)</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 구글 맵 임베드 -->
                         <div class="w-full h-64 rounded-xl overflow-hidden shadow-lg border border-gray-700">
                             <iframe 
                                 src="https://maps.google.com/maps?q=서울시%20구로구%20디지털로%20243&t=&z=16&ie=UTF8&iwloc=&output=embed" 
@@ -402,16 +379,30 @@
         </section>
     </main>
 
-    <!-- 7. Footer -->
     <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
         <div class="max-w-7xl mx-auto px-4">
             <p>&copy; 2026 성민안경. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript 로직 -->
+    <!-- Custom Modal for Booking -->
+    <div id="bookingModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+                    <i class="fa-solid fa-check text-2xl text-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">예약 신청 완료</h3>
+                <p id="modalMessage" class="text-gray-600 mb-8"></p>
+                <button onclick="closeModal()" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-xl transition">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vimeo API Script -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
     <script>
-        // 1. 헤더 스크롤 효과 (Sticky & Shadow)
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 10) {
@@ -423,44 +414,42 @@
             }
         });
 
-        // 2. 탭 메뉴 기능
         function openTab(tabName) {
-            // 모든 탭 컨텐츠 숨기기
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
                 content.classList.add('hidden');
-                content.classList.remove('grid'); // Tailwind grid 유지용
+                content.classList.remove('grid');
             });
 
-            // 모든 버튼 초기화 (비활성 상태)
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('bg-primary', 'text-white', 'shadow-md', 'active');
                 btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200');
             });
 
-            // 선택된 탭 컨텐츠 보이기
             const activeContent = document.getElementById(tabName);
             activeContent.classList.remove('hidden');
             activeContent.classList.add('grid');
 
-            // 선택된 탭 버튼 스타일 활성화
             const activeButton = document.getElementById('btn-' + tabName);
             activeButton.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200');
             activeButton.classList.add('bg-primary', 'text-white', 'shadow-md', 'active');
         }
 
-        // 3. 예약 폼 제출 핸들러 (데모용)
         function handleBooking(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
             const date = document.getElementById('date').value;
-            
-            // 데모: 실제 서버 전송 로직 대신 Alert 메시지로 대체
-            alert(`${name}님, ${date} 일자로 예약 신청이 완료되었습니다.\n담당자가 곧 확인 후 연락드리겠습니다. 감사합니다.`);
-            
-            // 폼 초기화
+            const modalMessage = document.getElementById('modalMessage');
+            modalMessage.innerHTML = `<span class="font-bold text-gray-900">${name}</span>님, <span class="font-bold text-gray-900">${date}</span> 일자로<br>예약 신청이 완료되었습니다.<br>담당자가 곧 확인 후 연락드리겠습니다.`;
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').classList.add('flex');
             document.getElementById('bookingForm').reset();
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('flex');
+            document.getElementById('bookingModal').classList.add('hidden');
         }
     </script>
 </body>
